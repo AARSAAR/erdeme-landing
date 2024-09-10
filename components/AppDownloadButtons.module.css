@@ -1,0 +1,12 @@
+/* components/AppDownloadButtons.module.css */
+.buttonsContainer {
+  display: flex;
+  gap: 10px; /* Space between the buttons */
+  justify-content: center; /* Center align the buttons */
+  margin: 20px 0; /* Space around the buttons */
+}
+
+.badge {
+  width: 200px; /* Set width */
+  height: auto; /* Maintain aspect ratio */
+}
