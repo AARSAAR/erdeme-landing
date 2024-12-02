@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import MobileMenu from './mobile-menu'
-import Image from 'next/image'
-import HeroImage from '@/public/images/erdeme-logo.png'
+import Link from "next/link";
+import MobileMenu from "./mobile-menu";
+import Image from "next/image";
+import HeroImage from "@/public/images/erdeme-logo.png";
 
 export default function Header() {
   return (
@@ -12,13 +12,18 @@ export default function Header() {
           <div className="shrink-0 mr-4">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Image className="max-w-full mx-auto md:max-w-none h-auto rounded-lg" src={HeroImage} width={76} height={76} alt="Hero" />
+              <Image
+                className="max-w-full mx-auto md:max-w-none h-auto rounded-lg"
+                src={HeroImage}
+                width={76}
+                height={76}
+                alt="Hero"
+              />
             </Link>
           </div>
           {/* <MobileMenu /> */}
-
         </div>
       </div>
     </header>
-  )
+  );
 }
