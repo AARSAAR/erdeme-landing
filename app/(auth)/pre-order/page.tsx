@@ -6,7 +6,8 @@ import axios from "axios";
 
 export default function PreOrder() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
   });
@@ -16,26 +17,22 @@ export default function PreOrder() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Split name into first and last name
-    const nameParts = formData.name.trim().split(/\s+/);
-    const firstName = nameParts[0] || "";
-    const lastName = nameParts.slice(1).join(" ") || "";
-
     try {
       const { data } = await axios.post(
         `${process.env.NEXT_PUBLIC_API_URL}/user/pre-order`,
         {
-          firstName,
-          lastName,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
-          phoneNumber: formData.phone,
+          phoneNumber: formData.phone.startsWith("+976")
+            ? formData.phone
+            : `+976${formData.phone}`,
         }
       );
 
-      console.log("Server response:", data);
-
+      console.log("Server response:", data.message);
       setSuccess(true);
-      setFormData({ name: "", email: "", phone: "" });
+      setFormData({ firstName: "", lastName: "", email: "", phone: "" });
       setError("");
     } catch (err) {
       console.error("Error:", err);
@@ -80,19 +77,40 @@ export default function PreOrder() {
                   <div className="w-full px-3">
                     <label
                       className="block text-gray-300 text-sm font-medium mb-1"
-                      htmlFor="name"
+                      htmlFor="firstName"
                     >
                       Нэр <span className="text-red-600">*</span>
                     </label>
                     <input
-                      id="name"
+                      id="firstName"
                       type="text"
                       className="form-input w-full text-gray-300 rounded-lg"
                       placeholder="Таны нэр"
                       required
-                      value={formData.name}
+                      value={formData.firstName}
                       onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
+                        setFormData({ ...formData, firstName: e.target.value })
+                      }
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-wrap -mx-3 mb-4">
+                  <div className="w-full px-3">
+                    <label
+                      className="block text-gray-300 text-sm font-medium mb-1"
+                      htmlFor="lastName"
+                    >
+                      Овог <span className="text-red-600">*</span>
+                    </label>
+                    <input
+                      id="lastName"
+                      type="text"
+                      className="form-input w-full text-gray-300 rounded-lg"
+                      placeholder="Таны овог"
+                      required
+                      value={formData.lastName}
+                      onChange={(e) =>
+                        setFormData({ ...formData, lastName: e.target.value })
                       }
                     />
                   </div>
