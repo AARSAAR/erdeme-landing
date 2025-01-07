@@ -36,34 +36,34 @@ export const zigzagItems: ZigzagItem[] = [
     number: "3",
     title: "Цагаа сонгох",
     description:
-      "Та багшийн боломжтой сул цагаас сонгон төлбөрөө хийж баталгаажуулна. Ингэснээр уулзалт орох Google Meet Link үүсэх ба тухайн цагтаа хичээл эхлэх болно.",
+      "Та багшийн боломжтой сул цагаас сонгон төлбөрөө хийж баталгаажуулна.",
     image: TaskerProfile,
     listItems: ["Хурдан", "Цэгцтэй", "Үр дүнтэй"],
   },
   {
     number: "4",
-    title: "Lorem Ipsum",
+    title: "Хичээлүүд",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "Уулзалт орох Google Meet Link үүсэх ба тухайн цагтаа хичээл эхлэх болно.",
     image: Lessons,
     listItems: [],
     isReversed: true,
   },
   {
     number: "5",
-    title: "Lorem Ipsum",
+    title: "Хуанли",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "Багш нар өөрийн гэсэн хуанлигаа хянаж явах боломжтойгоос гадна хичээл орох сул цагуудаа нэмж өгнө.",
     image: Calendar,
     listItems: [],
   },
   {
     number: "6",
-    title: "Lorem Ipsum",
+    title: "Данс",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      "Багш нарт зориулсан орлогоо хянах, татаж авах хэсэг",
     image: Profile,
-    listItems: [],
+    listItems: ["Хялбар", "Ойлгомжтой"],
     isReversed: true,
   },
 ];
