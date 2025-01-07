@@ -27,7 +27,6 @@ export default function PreOrder() {
           phoneNumber: formData.phone.startsWith("+976")
             ? formData.phone
             : `+976${formData.phone}`,
-          status: "pending",
         }
       );
 
