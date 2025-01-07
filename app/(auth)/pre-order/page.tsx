@@ -31,7 +31,6 @@ export default function PreOrder() {
         }
       );
 
-      console.log("Server response:", data.message);
       setSuccess(true);
       setFormData({ firstName: "", lastName: "", email: "", phone: "" });
       setError("");

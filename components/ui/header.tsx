@@ -21,8 +21,8 @@ export default function Header() {
               <Image
                 className="max-w-full mx-auto md:max-w-none h-auto rounded-lg"
                 src={HeroImage}
-                width={76}
-                height={76}
+                width={120}
+                height={120}
                 alt="Hero"
               />
             </Link>
