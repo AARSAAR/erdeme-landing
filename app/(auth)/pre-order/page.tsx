@@ -19,7 +19,7 @@ export default function PreOrder() {
 
     try {
       const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/user/pre-order`,
+        `${process.env.NEXT_PUBLIC_API_URL}/admin/pre-order`,
         {
           firstName: formData.firstName,
           lastName: formData.lastName,
@@ -27,6 +27,7 @@ export default function PreOrder() {
           phoneNumber: formData.phone.startsWith("+976")
             ? formData.phone
             : `+976${formData.phone}`,
+          status: "pending",
         }
       );
 
