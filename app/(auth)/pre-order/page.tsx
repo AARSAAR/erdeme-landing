@@ -13,9 +13,14 @@ export default function PreOrder() {
   });
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
 
     try {
       const { data } = await axios.post(
@@ -40,6 +45,8 @@ export default function PreOrder() {
       } else {
         setError("Сервертэй холбогдоход алдаа гарлаа");
       }
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -159,8 +166,11 @@ export default function PreOrder() {
                 {error && <div className="text-red-500 mb-4">{error}</div>}
                 <div className="flex flex-wrap -mx-3 mt-6">
                   <div className="w-full px-3">
-                    <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full rounded-lg">
-                      Бүртгүүлэх
+                    <button
+                      className="btn text-white bg-purple-600 hover:bg-purple-700 w-full rounded-lg"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Түр хүлээнэ үү..." : "Бүртгүүлэх"}
                     </button>
                   </div>
                 </div>
