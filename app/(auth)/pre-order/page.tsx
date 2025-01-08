@@ -51,8 +51,8 @@ export default function PreOrder() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h1 className="h1 mb-4">Багшаар бүртгүүлэх</h1>
             <p className="text-xl text-gray-400">
-              Та өөрийн мэдээллээ үлдээснээр бид тантай эхний ээлжинд холбогдох
-              болно.
+              Энэ нь урьдчилсан бүртгэл бөгөөд, нээлт хийсэн даруйд тантай доорх
+              мэдээллээр холбогдох болно
             </p>
           </div>
 
