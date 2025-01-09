@@ -1,12 +1,22 @@
 /* components/AppDownloadButtons.module.css */
 .buttonsContainer {
   display: flex;
-  gap: 10px; /* Space between the buttons */
-  justify-content: center; /* Center align the buttons */
-  margin: 20px 0; /* Space around the buttons */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
 }
 
 .badge {
-  width: 200px; /* Set width */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.comingSoonText {
+  font-size: 1.5rem;
+  color: #9333ea; /* purple-600 */
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
