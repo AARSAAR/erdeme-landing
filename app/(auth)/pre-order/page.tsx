@@ -167,10 +167,12 @@ export default function PreOrder() {
                 <div className="flex flex-wrap -mx-3 mt-6">
                   <div className="w-full px-3">
                     <button
-                      className="btn text-white bg-purple-600 hover:bg-purple-700 w-full rounded-lg"
                       disabled={isSubmitting}
+                      className="btn text-white bg-purple-600 hover:bg-purple-700 w-full rounded-lg !important"
                     >
-                      {isSubmitting ? "Түр хүлээнэ үү..." : "Бүртгүүлэх"}
+                      <span className="block w-full text-center">
+                        {isSubmitting ? "Түр хүлээнэ үү..." : "Бүртгүүлэх"}
+                      </span>
                     </button>
                   </div>
                 </div>

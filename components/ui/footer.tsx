@@ -93,7 +93,13 @@ export default function Footer() {
 
             {/* Copyrights note */}
             <div className="text-gray-400 text-md mr-4">
-              &copy; erdeme.mn. All rights reserved.
+              &copy; erdeme.mn. All rights reserved.{" "}
+              <Link
+                href="/privacy-policy"
+                className="hover:text-gray-200 transition duration-150 ease-in-out ml-1"
+              >
+                Privacy Policy
+              </Link>
             </div>
           </div>
         </div>
