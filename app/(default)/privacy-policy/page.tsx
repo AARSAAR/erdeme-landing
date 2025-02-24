@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
                        <span style="font-size: 15px;">
                           <span data-custom-class="subtitle">
                              Last updated 
-                             <bdt class="question">Jan 22, 2024</bdt>
+                             <bdt class="question">Feb 24, 2025</bdt>
                           </span>
                        </span>
                     </strong>
