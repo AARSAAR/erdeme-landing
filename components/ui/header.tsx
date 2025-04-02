@@ -29,7 +29,7 @@ export default function Header() {
           </div>
 
           {/* Pre-order button - only shown on homepage */}
-          <div className="flex-1 flex justify-end">
+          {/* <div className="flex-1 flex justify-end">
             {isHomePage && (
               <Link
                 href="/pre-order"
@@ -38,7 +38,7 @@ export default function Header() {
                 Багшаар бүртгүүлэх
               </Link>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
